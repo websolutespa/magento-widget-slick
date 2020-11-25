@@ -4,8 +4,8 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
-        "msp/slick": "^0.2.0",
-        "websolute/widget-generator": "^1.0.0"
+        "msp/slick": "^0.2",
+        "websolutespa/magento-widget-generator": "^1.0"
     },
     "license": [
         "OSL-3.0"
