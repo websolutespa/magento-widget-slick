@@ -1,0 +1,21 @@
+{
+    "name": "websolutespa/magento-widget-slick",
+    "description": "This module provides slick-slider feature inside widget",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "msp/slick": "^0.2.0",
+        "websolute/widget-generator": "^1.0.0"
+    },
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Websolute\\WidgetSlick\\": ""
+        }
+    }
+}

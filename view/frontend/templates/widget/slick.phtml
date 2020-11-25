@@ -1,0 +1,31 @@
+<?php
+/*
+ * Copyright © Websolute spa. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block Widget */
+
+use Websolute\WidgetSlick\Block\Widget;
+
+?>
+<div class="slick-<?= $block->escapeHtmlAttr($block->getCmsBlockIdentifier()); ?>">
+    <?= $block->getChildHtml('cms_block_element'); ?>
+</div>
+<script type="text/x-magento-init">
+{
+    ".slick-<?= $block->escapeHtmlAttr($block->getCmsBlockIdentifier()); ?>": {
+        "widgetSlick": {
+            "autoplay"          :   <?= $block->escapeJs($block->hasAutoplay() ? 'true' : 'false'); ?>,
+            "autoPlayTimeout"   :   <?= $block->escapeJs($block->getAutoplayTimeout()); ?>,
+            "loop"              :   <?= $block->escapeJs($block->hasLoop() ? 'true' : 'false'); ?>,
+            "items"             :   <?= $block->escapeJs($block->getItems()); ?>,
+            "dots"              :   <?= $block->escapeJs($block->showDots() ? 'true' : 'false'); ?>,
+            "arrows"            :   <?= $block->escapeJs($block->showArrows() ? 'true' : 'false'); ?>,
+            "cssEase"           :   "<?= $block->escapeJs($block->getCssEase()); ?>"
+        }
+    }
+}
+
+
+</script>
